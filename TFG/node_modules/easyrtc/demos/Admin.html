@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    	<title>Aplicacion Sonido</title>
+        <link rel="stylesheet" type="text/css" href="css/easyrtcAdmin.css" />
+        <script src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="/easyrtc/easyrtc.js"></script>
+        <script type="text/javascript" src="audioAyudaAdmin.js"></script>
+    </head>
+     <body>
+        <div id="controles">
+        	<video id="buzonAudio"></video>
+            <button id="botonConectar" onclick="conectar()">Conectar</button>
+            <button id="botonColgar" disabled="disabled" onclick="colgarTodos()">Colgar</button>
+            <button id="botonDesconectar" disabled="disabled" onclick="desconectar()">Desconectar</button>
+            <button id="botonLlamarTodos" onclick="llamarTodos()">Llamar a todos</button>
+            <div id="iam">DESCONECTADO</div>
+           	<span id="textoSpan">Usuarios Conectados:</span>
+            <div id="usuariosConectados">
+            </div>
+        </div>
+
+        <div id="alertaLlamada"> 
+        	<div id="infoAlertaLlamada"></div>
+            <button id="botonResponder">Responder</button> 
+            <button id="botonRechazar">Rechazar</button>
+        </div>
+        <div id="infoLlamada">
+		</div>
+   
+    </body>
+</html>
